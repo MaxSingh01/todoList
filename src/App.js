@@ -29,7 +29,8 @@ function App() {
   };
   const handleDelete = (id) => {
     let filterTodos = todos.filter((t) => t.id !== id);
-    setTodos([...filterTodos]);
+    console.log(filterTodos)
+    setTodos(filterTodos);
     console.log(todos);
   };
   const handleEdit = (id) => {
@@ -52,6 +53,7 @@ function App() {
 
           {/* todo list */}
           <TodoList
+            todo={todo}
             todos={todos}
             handleEdit={handleEdit}
             handleDelete={handleDelete}
